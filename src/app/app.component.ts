@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'akschybalova';
+  public hideNav!: boolean;
+  private scrollTop = 0;
+
+  constructor(private breakpointObserver: BreakpointObserver) {
+
+  }
+
+  ngOnInit() {
+    window.addEventListener('scroll', (eventScroll: any) => {
+      this.hideNav = this.scrollTop < eventScroll.currentTarget.pageYOffset;
+      this.scrollTop = eventScroll.currentTarget.pageYOffset;
+    })
+  }
 }

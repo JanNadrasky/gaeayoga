@@ -1,0 +1,28 @@
+:host {
+  width: 100%;
+}
+
+.contact {
+  position: sticky;
+  right: 0;
+  top: 200px;
+  width: 100%;
+  z-index: 10000000000000;
+
+  &__wrapper {
+    width: 100%;
+
+    &__box {
+      max-width: 800px;
+      width: 100%;
+
+      &__items {
+        background: green;
+        height: 120px;
+        width: 60px;
+        float: right;
+        border-radius: 10px 0 0 10px;
+      }
+    }
+  }
+}

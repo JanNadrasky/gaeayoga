@@ -1,0 +1,30 @@
+<div
+  class="header-wrapper"
+  ngxHideOnScroll
+  [propertyUsedToHide]="'transform'"
+  [valueWhenHidden]="'translateY(-100%)'"
+  [valueWhenShown]="'translateY(0%)'"
+>
+  <div class="header" fxLayoutAlign="center space-between">
+    <div
+      class="header__container"
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+    >
+      <img
+        class="header__container--logo"
+        src="../../../assets/images/logo.png"
+      />
+      <div
+        class="header__container__menu-items"
+        fxLayoutGap="30px"
+        fxLayout="row"
+      >
+        <h3 i18n><a (click)="navigateTo('references')">Reference</a></h3>
+        <h3 i18n><a (click)="navigateTo('services')">Služby</a></h3>
+        <h3 i18n><a (click)="navigateTo('about')">O mně</a></h3>
+        <h3 i18n><a (click)="navigateTo('faq')">FAQ</a></h3>
+      </div>
+    </div>
+  </div>
+</div>

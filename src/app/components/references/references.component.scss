@@ -1,0 +1,15 @@
+:host {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.references-wrapper {
+  &--quotation {
+    max-width: 40px;
+    height: 40px;
+  }
+
+  &--text {
+    text-align: justify;
+  }
+}

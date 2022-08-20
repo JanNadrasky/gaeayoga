@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "akschybalova": {
-      "projectType": "application",
+      "projectType": "application",      
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -16,10 +16,24 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": { 
+        "sourceLocale": "cz",
+        "locales": {
+          "en": {
+            "translation": "src/locale/messages.en.xlf",
+            "baseHref": ""
+          },
+          "sp": {
+            "translation": "src/locale/messages.sp.xlf",
+            "baseHref": ""
+          }
+        },
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/akschybalova",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -58,12 +72,19 @@
               "outputHashing": "all"
             },
             "development": {
+              "localize": false,
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "en": {
+              "localize": ["en"]
+            },
+            "sp": {
+              "localize": ["sp"]
             }
           },
           "defaultConfiguration": "production"
