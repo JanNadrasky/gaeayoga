@@ -6,12 +6,26 @@
 @import "swiper/css/effect-fade";
 @import "swiper/css/parallax";
 
+@font-face {
+    font-family: Libre Franklin sans-serif;
+    src: url("/assets/fonts/LibreFranklin-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Prata Regular sans-serif;
+    src: url("/assets/fonts/Prata-Regular.ttf") format("truetype");
+}
+
 body {
-  font-family: "TeXGyreAdventor", sans-serif;
+  font-family: Prata Regular sans-serif;
+  margin: 0;
+  color: white;
 }
 
 h1 {
-  font-size: 34px;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 80px;
   font-weight: bold;
 }
 
@@ -31,7 +45,8 @@ span {
 }
 
 a {
-  color: black;
+  font-size: 16px;
+  font-family: Libre Franklin sans-serif;
 
   &:hover {
     cursor: pointer;
@@ -44,15 +59,24 @@ img {
   height: auto;
 }
 
+.swiper-button-prev {
+  color: white;
+}
+
+.swiper-button-next {
+  color: white;
+}
+
 button {
   max-width: 100%;
-  min-width: 100%;
-  border-color: rgb(207, 185, 151);
-  background-color: rgb(169, 149, 123);
+  min-width: 140px;
+  border-color: white;
+  min-height: 60px;
+  background-color: rgba(52,204,189,255);
 
-  color: black;
+  color: white;
   border-style: solid;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 5px 0;
   font-family: "TeXGyreAdventor", sans-serif;
   font-weight: bold;

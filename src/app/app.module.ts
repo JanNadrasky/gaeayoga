@@ -12,6 +12,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ProfilePhotoComponent } from './components/profile-photo/profile-photo.component';
 import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
 import { ContactComponent } from './components/contact/contact.component';
+import {LayoutModule} from '@angular/cdk/layout';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { ContactComponent } from './components/contact/contact.component';
     ContactComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
     SwiperModule,
-    NgxHideOnScrollModule
+    NgxHideOnScrollModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

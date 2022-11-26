@@ -7,10 +7,14 @@ import { Component, Inject, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  isNotTop!: boolean;
 
   constructor(@Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
+    window.addEventListener('scroll', (eventScroll: any) => {
+      this.isNotTop  = eventScroll.currentTarget.pageYOffset > 0;
+    });
   }
 
   navigateTo(pattern: string) {

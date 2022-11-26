@@ -1,3 +1,54 @@
 :host {
   width: 100%;
+  background-color: rgba(52,204,189,255);
+  background: rgba(52,204,189,255);
 }
+
+.swiper-wrapper {
+  position: relative;
+
+  &__swiper-image {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/images/headerbg.jpg');
+    background-size: 100%;
+
+    &--img {
+      width: 100%;
+      height: auto;
+      
+    }
+
+    &__info-container {
+      padding-bottom: 100px;
+    }
+  }
+}
+
+.swiper-wrapper-xs {
+  position: relative;
+
+  &__swiper-image {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/images/headerbg.jpg');
+    background-size: 200%;
+
+    
+   &--img {
+      position: relative;
+      width: 100%;
+      height: auto;
+      
+    }
+  }
+
+
+    &__info-container {
+      position: relative;
+      padding-bottom: 100px;
+    }
+}
+

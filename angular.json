@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "akschybalova": {
+    "gaeayoga": {
       "projectType": "application",      
       "schematics": {
         "@schematics/angular:component": {
@@ -34,7 +34,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "localize": true,
-            "outputPath": "dist/akschybalova",
+            "outputPath": "dist/gaeayoga",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -93,10 +93,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "akschybalova:build:production"
+              "browserTarget": "gaeayoga:build:production"
             },
             "development": {
-              "browserTarget": "akschybalova:build:development"
+              "browserTarget": "gaeayoga:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -104,7 +104,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "akschybalova:build"
+            "browserTarget": "gaeayoga:build"
           }
         },
         "test": {
@@ -128,5 +128,5 @@
       }
     }
   },
-  "defaultProject": "akschybalova"
+  "defaultProject": "gaeayoga"
 }

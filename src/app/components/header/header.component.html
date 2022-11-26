@@ -5,25 +5,39 @@
   [valueWhenHidden]="'translateY(-100%)'"
   [valueWhenShown]="'translateY(0%)'"
 >
-  <div class="header" fxLayoutAlign="center space-between">
+  <div id="header" class="header" fxLayoutAlign="center space-between">
     <div
       class="header__container"
       fxLayout="row"
       fxLayoutAlign="space-between center"
     >
       <img
+        *ngIf="!isNotTop"
         class="header__container--logo"
-        src="../../../assets/images/logo.png"
+        src="../../../assets/logos/Logo1.png"
+      />
+      <img
+        *ngIf="isNotTop"
+        class="header__container--logo"
+        src="../../../assets/logos/Logo2.png"
       />
       <div
         class="header__container__menu-items"
         fxLayoutGap="30px"
-        fxLayout="row"
-      >
-        <h3 i18n><a (click)="navigateTo('references')">Reference</a></h3>
-        <h3 i18n><a (click)="navigateTo('services')">Služby</a></h3>
-        <h3 i18n><a (click)="navigateTo('about')">O mně</a></h3>
-        <h3 i18n><a (click)="navigateTo('faq')">FAQ</a></h3>
+        fxLayout="row">
+        <h3 i18n><a class="header-link" (click)="navigateTo('references')">Domů</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('services')">O nás</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('about')">Lekce</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('faq')">Rozvrh</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('faq')">Ceník</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('faq')">Akce</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('faq')">Rezervace</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('faq')">Shop</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('faq')">Kontakt</a></h3>
+      </div>
+      <div class="header__container__social" fxLayout="row" fxLayoutAlign="space-between">
+        <i class="fa fa-facebook-f"></i>
+        <i class="fa fa-instagram"></i>
       </div>
     </div>
   </div>
