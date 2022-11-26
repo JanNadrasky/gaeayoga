@@ -28,6 +28,7 @@
 
 .swiper-wrapper-xs {
   position: relative;
+  padding-top: 100px;
 
   &__swiper-image {
     position: relative;
@@ -47,8 +48,9 @@
 
 
     &__info-container {
+      background-color:rgba(52,204,189,255) ;
       position: relative;
-      padding-bottom: 100px;
+      padding-bottom: 20px;
     }
 }
 

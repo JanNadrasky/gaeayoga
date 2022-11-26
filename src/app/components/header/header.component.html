@@ -1,3 +1,4 @@
+
 <div
   class="header-wrapper"
   ngxHideOnScroll
@@ -21,24 +22,44 @@
         class="header__container--logo"
         src="../../../assets/logos/Logo2.png"
       />
+      <i id="hamburgerIcon" (click)="onNavbarOpen()" fxHide.gt-sm class="fa fa-bars fa-4x"></i>
       <div
+        fxHide.lt-md
         class="header__container__menu-items"
         fxLayoutGap="30px"
         fxLayout="row">
-        <h3 i18n><a class="header-link" (click)="navigateTo('references')">Domů</a></h3>
-        <h3 i18n><a class="header-link" (click)="navigateTo('services')">O nás</a></h3>
-        <h3 i18n><a class="header-link" (click)="navigateTo('about')">Lekce</a></h3>
-        <h3 i18n><a class="header-link" (click)="navigateTo('faq')">Rozvrh</a></h3>
-        <h3 i18n><a class="header-link" (click)="navigateTo('faq')">Ceník</a></h3>
-        <h3 i18n><a class="header-link" (click)="navigateTo('faq')">Akce</a></h3>
-        <h3 i18n><a class="header-link" (click)="navigateTo('faq')">Rezervace</a></h3>
-        <h3 i18n><a class="header-link" (click)="navigateTo('faq')">Shop</a></h3>
-        <h3 i18n><a class="header-link" (click)="navigateTo('faq')">Kontakt</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('references', false)">Domů</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('services', false)">O nás</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('about', false)">Lekce</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('faq', false)">Rozvrh</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('faq', false)">Ceník</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('faq', false)">Akce</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('faq', false)">Rezervace</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('faq', false)">Shop</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('faq', false)">Kontakt</a></h3>
       </div>
-      <div class="header__container__social" fxLayout="row" fxLayoutAlign="space-between">
+      <div fxHide.lt-md class="header__container__social" fxLayout="row" fxLayoutAlign="space-between">
         <i class="fa fa-facebook-f"></i>
         <i class="fa fa-instagram"></i>
       </div>
     </div>
   </div>
+</div>
+
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <h4 i18n><a class="header-link-burger" (click)="navigateTo('references', true)">Domů</a></h4>
+        <h4 i18n><a class="header-link-burger" (click)="navigateTo('services', true)">O nás</a></h4>
+        <h4 i18n><a class="header-link-burger" (click)="navigateTo('about', true)">Lekce</a></h4>
+        <h4 i18n><a class="header-link-burger" (click)="navigateTo('faq', true)">Rozvrh</a></h4>
+        <h4 i18n><a class="header-link-burger" (click)="navigateTo('faq', true)">Ceník</a></h4>
+        <h4 i18n><a class="header-link-burger" (click)="navigateTo('faq', true)">Akce</a></h4>
+        <h4 i18n><a class="header-link-burger" (click)="navigateTo('faq', true)">Rezervace</a></h4>
+        <h4 i18n><a class="header-link-burger" (click)="navigateTo('faq', true)">Shop</a></h4>
+        <h4 i18n><a class="header-link-burger" (click)="navigateTo('faq', true)">Kontakt</a></h4>
+  </div>
+
 </div>

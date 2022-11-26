@@ -21,6 +21,14 @@ export class AppComponent {
       this.scrollTop = eventScroll.currentTarget.pageYOffset;
       const header = this.document.getElementById('header');
       const headerLinks = this.document.getElementsByClassName('header-link');
+      const hamburgerIcon = this.document.getElementById('hamburgerIcon');
+
+      if (hamburgerIcon && eventScroll.currentTarget.pageYOffset > 0) {
+        hamburgerIcon.style.color = '#34ccbd';
+      } else if (hamburgerIcon && eventScroll.currentTarget.pageYOffset === 0) {
+        hamburgerIcon.style.color = 'white';
+      }
+
       if (header && eventScroll.currentTarget.pageYOffset > 0) {
         header.style.backgroundColor = 'white';
         Array.prototype.forEach.call(headerLinks, function(el) {

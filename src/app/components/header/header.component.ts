@@ -8,6 +8,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   isNotTop!: boolean;
+  navbarOpen!: boolean;
 
   constructor(@Inject(DOCUMENT) private document: Document) { }
 
@@ -17,7 +18,10 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  navigateTo(pattern: string) {
+  navigateTo(pattern: string, isMobile: boolean) {
+    if (isMobile) {
+      this.onNavbarOpen();
+    }
     const element = this.document.getElementById(pattern);
     const yOffset = -100;
     let y;
@@ -28,6 +32,20 @@ export class HeaderComponent implements OnInit {
     y = element.getBoundingClientRect().top + window.pageYOffset;
   }
   window.scrollTo({top: y, behavior: 'smooth'});
+  }
+
+  onNavbarOpen() {
+    this.navbarOpen = !this.navbarOpen;
+    const nav = this.document.getElementById("myNav");
+    const body = this.document.body;
+    if (nav && body && this.navbarOpen) {
+      body.style.overflow = 'hidden';
+      nav.style.width = "100%"
+    } else if (nav && body && !this.navbarOpen) {
+       nav.style.width = "0";
+       body.style.overflow = 'auto';
+    }
+    
   }
 
 }
