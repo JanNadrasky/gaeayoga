@@ -12,6 +12,7 @@ export class SectionComponent implements OnInit {
   @Input() text!: IServiceText;
   @Input() imgSrc!: string;
   @Input() title = 'default';
+  @Input() id = 'default';
 
   constructor() { }
 

@@ -38,7 +38,7 @@ export class AppComponent {
       if (header && eventScroll.currentTarget.pageYOffset > 0) {
         header.style.backgroundColor = 'white';
         Array.prototype.forEach.call(headerLinks, function(el) {
-          el.style.color = '$black';
+          el.style.color = 'black';
       });
       
       } else if (header && eventScroll.currentTarget.pageYOffset === 0) {
