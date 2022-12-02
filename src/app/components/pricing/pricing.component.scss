@@ -1,0 +1,11 @@
+@import "./../../../scss/variables";
+
+.pricing-wrapper {
+    width: 100%;
+
+    &__card {
+        padding: 40px;
+        max-width: 360px;
+        border: 2px solid $primary ;
+    }
+}

@@ -21,7 +21,7 @@ in those cases you can use the static font files for Libre Franklin:
   static/LibreFranklin-SemiBold.ttf
   static/LibreFranklin-Bold.ttf
   static/LibreFranklin-ExtraBold.ttf
-  static/LibreFranklin-Black.ttf
+  static/LibreFranklin-$black.ttf
   static/LibreFranklin-ThinItalic.ttf
   static/LibreFranklin-ExtraLightItalic.ttf
   static/LibreFranklin-LightItalic.ttf

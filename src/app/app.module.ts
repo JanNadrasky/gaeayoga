@@ -14,6 +14,8 @@ import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
 import { ContactComponent } from './components/contact/contact.component';
 import {LayoutModule} from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
+import { PricingComponent } from './components/pricing/pricing.component';
+import { SectionComponent } from './components/section/section.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CommonModule } from '@angular/common';
     ServicesComponent,
     AboutComponent,
     ProfilePhotoComponent,
-    ContactComponent
+    ContactComponent,
+    PricingComponent,
+    SectionComponent
   ],
   imports: [
     CommonModule,

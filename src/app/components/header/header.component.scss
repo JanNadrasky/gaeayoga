@@ -1,3 +1,5 @@
+@import "./../../../scss/variables";
+
 :host {
   width: 100%;
   display: block;
@@ -5,7 +7,7 @@
 }
 
 .header {
-  background-color: rgba(52,204,189,255);
+  background-color: $primary;
   padding: 0 60px;
   width: 100%;
 
@@ -40,13 +42,13 @@
 }
 
 @keyframes fadeBackground {
-  from { background-color: rgba(52,204,189,255) }
+  from { background-color: $primary }
   to { background-color: white; }
 }
 
 @keyframes fadeBackgroundRevese {
   from { background-color: white; }
-  to { background-color: rgba(52,204,189,255) }
+  to { background-color: $primary }
 }
 
 
@@ -60,8 +62,8 @@
   z-index: 10000; /* Sit on top */
   left: 0;
   top: 120px;
-  background-color: rgb(0,0,0); /* Black fallback color */
-  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  background-color: rgb(0,0,0); /* $black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* $black w/opacity */
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }

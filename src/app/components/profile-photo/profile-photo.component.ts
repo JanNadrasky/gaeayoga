@@ -1,5 +1,4 @@
-import { DOCUMENT } from '@angular/common';
-import { AfterViewInit, ChangeDetectorRef, Component, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import Swiper, { Autoplay, EffectFade, Navigation } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 
@@ -13,19 +12,20 @@ export class ProfilePhotoComponent {
 
   @ViewChild('swiper') swiper!: SwiperComponent;
   public button = 'REZERVOVAT';
-  public text = 'Joga lekce';
+  public text = 'Váš čas na jógu je dnes';
   
 
   public textIndex: number = 1;
-  private interval!: number;
+  private interval!: ReturnType<typeof setInterval>;
   private isNotFirst!: boolean;
   public swiperData = [
-    { src: '../../../assets/images/header1.png', button: 'REZERVOVAT', text: 'Joga lekce' },
-    { src: '../../../assets/images/header2.png', button: 'REZERVOVAT', text: 'Joga lekce' },
-    { src: '../../../assets/images/header3.png', button: 'REZERVOVAT', text: 'Joga lekce' },
-    { src: '../../../assets/images/header4.png', button: 'REZERVOVAT', text: 'Joga lekce' },
-    { src: '../../../assets/images/header5.png', button: 'REZERVOVAT', text: 'Joga lekce' },
+    { src: '../../../assets/images/header1.png', button: 'REZERVOVAT', text: 'Váš čas na jógu je dnes' },
+    { src: '../../../assets/images/header2.png', button: 'REZERVOVAT', text: 'Váš čas na jógu je dnes' },
+    { src: '../../../assets/images/header3.png', button: 'REZERVOVAT', text: 'Váš čas na jógu je dnes' },
+    { src: '../../../assets/images/header4.png', button: 'REZERVOVAT', text: 'Váš čas na jógu je dnes' },
+    { src: '../../../assets/images/header5.png', button: 'REZERVOVAT', text: 'Váš čas na jógu je dnes' },
   ]
+  isStopped!: boolean;
 
   constructor(private ref: ChangeDetectorRef) { }
 
@@ -38,16 +38,20 @@ export class ProfilePhotoComponent {
 
   stopTimeout() {
     clearInterval(this.interval);
+    this.isStopped = true;
   }
 
   onSwiper(swiper: any) {
-   this.interval = setInterval(() => {
-      swiper.slideNext();
-    }, 20000);
-    
+    if (!this.isStopped) {
+      this.interval = setInterval(() => {
+        swiper.slideNext();
+      }, 20000);
+    }
   }
 
   onSlideChange(event: any): void {
+    clearInterval(this.interval);
+    this.isStopped = true;
     if (this.isNotFirst) {
       this.textIndex = event[0].realIndex;
       this.ref.detectChanges();

@@ -10,17 +10,19 @@
       (slideChange)="onSlideChange($event)"
       [loop]="true"
       [autoplay]="{
-        delay: 10000,
+        delay: 2000,
         disableOnInteraction: true
       }"
       [pagination]="{ clickable: true }"
     >
       <ng-template swiperSlide *ngFor="let slide of swiperData">
         <div class="swiper-wrapper__swiper-image">
-          <img class="swiper-wrapper__swiper-image--img" [src]="slide.src" fxFlex="50%"/>
-          <div class="swiper-wrapper__swiper-image__info-container" fxLayoutAlign="center start" fxLayout="column" fxFlex="50%">
+          <img class="swiper-wrapper__swiper-image--img" [src]="slide.src" fxFlex="40%"/>
+          <div class="swiper-wrapper__swiper-image__info-container" fxLayoutAlign="center start" fxLayout="column" fxFlex="60%">
+            <div style="max-width: 400px">
             <h1 class="swiper-wrapper__swiper-image__info-container--text">{{ slide.text }}</h1>
             <button class="swiper-wrapper__swiper-image__info-container--button">{{ slide.button }}</button>
+            </div>
           </div>
         </div>
       </ng-template>

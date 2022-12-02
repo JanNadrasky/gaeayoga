@@ -6,6 +6,8 @@
 @import "swiper/css/effect-fade";
 @import "swiper/css/parallax";
 
+@import "./scss/variables";
+
 @font-face {
     font-family: Libre Franklin sans-serif;
     src: url("/assets/fonts/LibreFranklin-VariableFont_wght.ttf") format("truetype");
@@ -24,9 +26,8 @@ body {
 
 h1 {
   font-size: 70px;
-  font-weight: 400;
+  font-weight: 100;
   line-height: 80px;
-  font-weight: bold;
 }
 
 h2 {
@@ -42,6 +43,7 @@ h3 {
 span {
   font-size: 16px;
   font-weight: 100;
+  line-height: 32px;
 }
 
 a {
@@ -52,6 +54,14 @@ a {
     cursor: pointer;
     text-decoration: underline;
   }
+}
+
+.text-color-black {
+  color: $black;
+}
+
+.text-color-green {
+  color: $primary;
 }
 
 img {
@@ -72,7 +82,7 @@ button {
   min-width: 140px;
   border-color: white;
   min-height: 60px;
-  background-color: rgba(52,204,189,255);
+  background-color: $primary;
 
   color: white;
   border-style: solid;
