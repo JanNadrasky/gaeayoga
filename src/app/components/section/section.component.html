@@ -7,12 +7,12 @@
             </div>
         </div>
     </section>
-    <section class="section-wrapper__body-wrapper" fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap="40px" fxLayoutAlign="center center">
+    <section *ngFor="let text of texts" class="section-wrapper__body-wrapper" fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap="40px" fxLayoutAlign="center center">
         <div fxFlex.gt-sm="50%" class="section-wrapper__body-wrapper__quote">
-            <h1>"{{ text.quote }}„</h1>
+            <h1>{{ text.quote }}</h1>
         </div>
-        <div class="section-wrapper__body-wrapper__text" fxLayout="column">
-            <span class="section-wrapper__body-wrapper__text--text">{{ text.text }}</span>
+        <div fxFlex.gt-sm="50%" class="section-wrapper__body-wrapper__text" fxLayout="column">
+            <span [innerHTML]="text.text" class="section-wrapper__body-wrapper__text--text"></span>
             <button>REZERVOVAT</button>
         </div>
     </section>

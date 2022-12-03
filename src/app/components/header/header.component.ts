@@ -19,6 +19,9 @@ export class HeaderComponent implements OnInit {
   }
 
   navigateTo(pattern: string, isMobile: boolean) {
+    if (pattern === 'top') {
+      window.scrollTo(0,0);
+    }
     if (isMobile) {
       this.onNavbarOpen();
     }

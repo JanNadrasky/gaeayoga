@@ -32,7 +32,7 @@
 
 .swiper-wrapper-xs {
   position: relative;
-  padding-top: 100px;
+  padding-top: 120px;
 
   &__swiper-image {
     position: relative;
@@ -56,6 +56,10 @@
       background-color:$primary ;
       position: relative;
       padding-bottom: 20px;
+
+      &--text {
+        text-align: center;
+      }
     }
 }
 

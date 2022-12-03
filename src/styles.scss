@@ -32,12 +32,12 @@ h1 {
 
 h2 {
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 h3 {
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 span {
@@ -93,8 +93,9 @@ button {
   cursor: pointer;
 
   &:hover {
-    border-color: rgb(169, 149, 123);
-    background-color: rgb(207, 185, 151);
+    border-color: $primary;
+    background-color: white;
+    color: $primary;
   }
 }
 

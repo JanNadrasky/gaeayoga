@@ -28,15 +28,14 @@
         class="header__container__menu-items"
         fxLayoutGap="30px"
         fxLayout="row">
-        <h3 i18n><a class="header-link" (click)="navigateTo('references', false)">Domů</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('top', false)">Domů</a></h3>
         <h3 i18n><a class="header-link" (click)="navigateTo('about', false)">O nás</a></h3>
-        <h3 i18n><a class="header-link" (click)="navigateTo('about', false)">Lekce</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('lessons', false)">Lekce</a></h3>
         <h3 i18n><a class="header-link" (click)="navigateTo('faq', false)">Rozvrh</a></h3>
         <h3 i18n><a class="header-link" (click)="navigateTo('pricing', false)">Ceník</a></h3>
-        <h3 i18n><a class="header-link" (click)="navigateTo('faq', false)">Akce</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('actions', false)">Akce</a></h3>
         <h3 i18n><a class="header-link" (click)="navigateTo('faq', false)">Rezervace</a></h3>
-        <h3 i18n><a class="header-link" (click)="navigateTo('faq', false)">Shop</a></h3>
-        <h3 i18n><a class="header-link" (click)="navigateTo('faq', false)">Kontakt</a></h3>
+        <h3 i18n><a class="header-link" (click)="navigateTo('footer', false)">Kontakt</a></h3>
       </div>
       <div fxHide.lt-md class="header__container__social" fxLayout="row" fxLayoutAlign="space-between">
         <i class="fa fa-facebook-f"></i>
@@ -51,15 +50,14 @@
 
   <!-- Overlay content -->
   <div class="overlay-content">
-    <h4 i18n><a class="header-link-burger" (click)="navigateTo('references', true)">Domů</a></h4>
-        <h4 i18n><a class="header-link-burger" (click)="navigateTo('services', true)">O nás</a></h4>
-        <h4 i18n><a class="header-link-burger" (click)="navigateTo('about', true)">Lekce</a></h4>
+    <h4 i18n><a class="header-link-burger" (click)="navigateTo('top', true)">Domů</a></h4>
+        <h4 i18n><a class="header-link-burger" (click)="navigateTo('about', true)">O nás</a></h4>
+        <h4 i18n><a class="header-link-burger" (click)="navigateTo('lessons', true)">Lekce</a></h4>
         <h4 i18n><a class="header-link-burger" (click)="navigateTo('faq', true)">Rozvrh</a></h4>
         <h4 i18n><a class="header-link-burger" (click)="navigateTo('pricing', true)">Ceník</a></h4>
-        <h4 i18n><a class="header-link-burger" (click)="navigateTo('faq', true)">Akce</a></h4>
+        <h4 i18n><a class="header-link-burger" (click)="navigateTo('actions', true)">Akce</a></h4>
         <h4 i18n><a class="header-link-burger" (click)="navigateTo('faq', true)">Rezervace</a></h4>
-        <h4 i18n><a class="header-link-burger" (click)="navigateTo('faq', true)">Shop</a></h4>
-        <h4 i18n><a class="header-link-burger" (click)="navigateTo('faq', true)">Kontakt</a></h4>
+        <h4 i18n><a class="header-link-burger" (click)="navigateTo('footer', true)">Kontakt</a></h4>
   </div>
 
 </div>

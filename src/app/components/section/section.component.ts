@@ -9,7 +9,7 @@ import { IServiceText } from 'src/app/interfaces/section.intrface';
 export class SectionComponent implements OnInit {
 
   @Input() section = 'default';
-  @Input() text!: IServiceText;
+  @Input() texts!: IServiceText[];
   @Input() imgSrc!: string;
   @Input() title = 'default';
   @Input() id = 'default';

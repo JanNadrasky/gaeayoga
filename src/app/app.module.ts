@@ -16,6 +16,7 @@ import {LayoutModule} from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { SectionComponent } from './components/section/section.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SectionComponent } from './components/section/section.component';
     ProfilePhotoComponent,
     ContactComponent,
     PricingComponent,
-    SectionComponent
+    SectionComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
