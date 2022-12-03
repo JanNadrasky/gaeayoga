@@ -23,7 +23,7 @@ export class AppComponent {
 
   public lessonTexts: IServiceText [] = [{
     quote: 'Skupinové lekce',
-    text: 'Chcete zkusit lekci tvořenou na míru vašim potřebám, pohybovým a zdravotním možnostem? Neváhejte a rezervujte si svou individuální lekci v čase, který vyhovuje vám. Spojíme přístupy, které budou sedět právě vám, tak abyste posunuli svou vlastní pohybovou praxi na další úroveň. <br><strong>Cena jedné lekce</strong> je 700,- za 75 minut.<br>Kontakt: Věra (734703426)'
+    text: 'Přijďte si vyzkoušet některou z našich skupinových jógových a pohybových lekcí. V nabídce máme širokou škálu od začátečníků až po pokročilé, takže si vybere skutečně každý. Lekce trvají 75 minut, některé i déle. Těšíme se na vás.'
   },{
     quote: 'Individuální lekce',
     text: 'Chcete zkusit lekci tvořenou na míru vašim potřebám, pohybovým a zdravotním možnostem? Neváhejte a rezervujte si svou individuální lekci v čase, který vyhovuje vám. Spojíme přístupy, které budou sedět právě vám, tak abyste posunuli svou vlastní pohybovou praxi na další úroveň. <br><br><strong>Cena jedné lekce</strong> je 700,- za 75 minut.<br>Kontakt: Věra (734703426)'
