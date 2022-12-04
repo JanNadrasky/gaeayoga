@@ -13,13 +13,13 @@
       fxLayoutAlign="space-between center"
     >
       <img
-        (click)="navigateTo('top', true)"
+        (click)="navigateTo('top', false)"
         *ngIf="!isNotTop"
         class="header__container--logo cursor-pointer"
         src="../../../assets/logos/Logo1.png"
       />
       <img
-        (click)="navigateTo('top', true)"
+        (click)="navigateTo('top', false)"
         *ngIf="isNotTop"
         class="header__container--logo cursor-pointer"
         src="../../../assets/logos/Logo2.png"

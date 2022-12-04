@@ -60,39 +60,21 @@ export class AppComponent {
     window.addEventListener('scroll', (eventScroll: any) => {
       this.hideNav = this.scrollTop < eventScroll.currentTarget.pageYOffset;
       this.scrollTop = eventScroll.currentTarget.pageYOffset;
-      const header = this.document.getElementById('header');
-      const headerLinks = this.document.getElementsByClassName('header-link');
       const hamburgerIcon = this.document.getElementById('hamburgerIcon');
-      const headerIcons = this.document.getElementsByClassName('fa');
 
-      if (headerIcons && eventScroll.currentTarget.pageYOffset > 0) {
-        Array.prototype.forEach.call(headerIcons, function(el) {
-          el.style.color = '#201F25';
-      });
+      const nav = this.document.getElementById('header');
+
+      if (nav && eventScroll.currentTarget.pageYOffset > 0) {
+        nav.classList.add('nav-inverse');
       
-      } else if (headerIcons && eventScroll.currentTarget.pageYOffset === 0) {
-         Array.prototype.forEach.call(headerIcons, function(el) {
-          el.style.color = 'white';
-      });
+      } else if (nav && eventScroll.currentTarget.pageYOffset === 0) {
+         nav.classList.remove('nav-inverse');
       }
 
        if (hamburgerIcon && eventScroll.currentTarget.pageYOffset > 0) {
         hamburgerIcon.style.color = '#34ccbd';
       } else if (hamburgerIcon && eventScroll.currentTarget.pageYOffset === 0) {
         hamburgerIcon.style.color = 'white';
-      }
-
-      if (header && eventScroll.currentTarget.pageYOffset > 0) {
-        header.style.backgroundColor = 'white';
-        Array.prototype.forEach.call(headerLinks, function(el) {
-          el.style.color = '#201F25';
-      });
-      
-      } else if (header && eventScroll.currentTarget.pageYOffset === 0) {
-        header.style.backgroundColor = '#34ccbd';
-         Array.prototype.forEach.call(headerLinks, function(el) {
-          el.style.color = 'white';
-      });
       }
     })
   }

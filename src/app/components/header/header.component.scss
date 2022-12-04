@@ -1,5 +1,10 @@
 @import "./../../../scss/variables";
 
+.nav-inverse {
+  color: $black !important;
+  background-color: white !important;
+}
+
 :host {
   width: 100%;
   display: block;
@@ -83,7 +88,7 @@
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #818181;
+  color: white;
   display: block; /* Display block instead of inline */
   transition: 0.3s; /* Transition effects on hover (color) */
 }
