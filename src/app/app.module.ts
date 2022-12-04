@@ -18,6 +18,7 @@ import { SectionComponent } from './components/section/section.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
 import { YogaTypesComponent } from './components/yoga-types/yoga-types.component';
+import { LecturersComponent } from './components/lecturers/lecturers.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { YogaTypesComponent } from './components/yoga-types/yoga-types.component
     PricingComponent,
     SectionComponent,
     FooterComponent,
-    YogaTypesComponent
+    YogaTypesComponent,
+    LecturersComponent
   ],
   imports: [
     CommonModule,

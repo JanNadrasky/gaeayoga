@@ -8,7 +8,7 @@
 
 .header {
   background-color: $primary;
-  padding: 0 60px;
+  padding: 0 40px;
   width: 100%;
 
   @media  screen and (max-width: 959px) {
@@ -18,7 +18,7 @@
   &__container {
     width: 100%;
     &--logo {
-      padding: 20px;
+      padding: 20px 0;
       width: auto;
       height: 80px;
     }
