@@ -7,7 +7,7 @@
             </div>
         </div>
     </section>
-    <section *ngFor="let text of texts" class="section-wrapper__body-wrapper" fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap="40px" fxLayoutAlign="center center">
+    <section *ngFor="let text of texts" class="section-wrapper__body-wrapper" fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap.gt-sm="40px" fxLayoutAlign="center center">
         <div fxFlex.gt-sm="50%" class="section-wrapper__body-wrapper__quote">
             <h1>{{ text.quote }}</h1>
         </div>

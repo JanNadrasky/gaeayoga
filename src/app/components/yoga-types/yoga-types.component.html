@@ -1,0 +1,31 @@
+<div class="yoga-types-wrapper" fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap.gt-md="40px" fxLayoutAlign="center center">
+    <div fxFlex.gt-sm="50%" class="yoga-types-wrapper__quote">
+            <h1>Druhy jógy</h1>
+        </div>
+        <div fxFlex.gt-sm="50%" ngClass.lt-md="full-width" class="yoga-types-wrapper__accordion">
+    <cdk-accordion class="accordion">
+        <cdk-accordion-item
+            *ngFor="let item of yogaTexts; let index = index;"
+            #accordionItem="cdkAccordionItem"
+            class="accordion-item"
+            role="button"
+            tabindex="0"
+            [attr.id]="'accordion-header-' + index"
+            [attr.aria-expanded]="accordionItem.expanded"
+            [attr.aria-controls]="'accordion-body-' + index">
+            <div class="accordion-item-header" (click)="accordionItem.toggle()">
+            {{ item.label }}
+            </div>
+            <div
+            class="accordion-item-body"
+            role="region"
+            [style.display]="accordionItem.expanded ? '' : 'none'"
+            [attr.id]="'accordion-body-' + index"
+            [attr.aria-labelledby]="'accordion-header-' + index">
+            {{ item.text }}
+            </div>
+        </cdk-accordion-item>
+        </cdk-accordion>
+        <button class="full-width">REZERVOVAT</button>
+    </div>
+</div>

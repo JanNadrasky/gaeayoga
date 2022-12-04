@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject } from '@angular/core';
-import { IServiceText } from './interfaces/section.intrface';
+import { IServiceText, IYogaTexts } from './interfaces/section.intrface';
 
 @Component({
   selector: 'app-root',
@@ -26,11 +26,31 @@ export class AppComponent {
     text: 'Přijďte si vyzkoušet některou z našich skupinových jógových a pohybových lekcí. V nabídce máme širokou škálu od začátečníků až po pokročilé, takže si vybere skutečně každý. Lekce trvají 75 minut, některé i déle. Těšíme se na vás.'
   },{
     quote: 'Individuální lekce',
-    text: 'Chcete zkusit lekci tvořenou na míru vašim potřebám, pohybovým a zdravotním možnostem? Neváhejte a rezervujte si svou individuální lekci v čase, který vyhovuje vám. Spojíme přístupy, které budou sedět právě vám, tak abyste posunuli svou vlastní pohybovou praxi na další úroveň. <br><br><strong>Cena jedné lekce</strong> je 700,- za 75 minut.<br>Kontakt: Věra (734703426)'
+    text: 'Chcete zkusit lekci tvořenou na míru vašim potřebám, pohybovým a zdravotním možnostem? Neváhejte a rezervujte si svou individuální lekci v čase, který vyhovuje vám. Spojíme přístupy, které budou sedět právě vám, tak abyste posunuli svou vlastní pohybovou praxi na další úroveň.'
   },{
     quote: 'Korporátní jóga',
-    text: 'Rádi byste, abychom přišli mi za vámi? Není problém domluvit si lekci třeba v prostorách vaší kanceláře. Skupinovou či individuální jógu. Dovolte si při práci na chvíli zastavit, příjemně se protáhnout a odreagovat. <br><br><strong>Cena pro jednotlivce:</strong> 600,- za 75 min <br><strong>Cena pro skupiny:</strong> 1200,- (pro skupiny do 10 ti účastníků, s každým dalším účastníkem + 50,-)'
+    text: 'Rádi byste, abychom přišli mi za vámi? Není problém domluvit si lekci třeba v prostorách vaší kanceláře. Skupinovou či individuální jógu. Dovolte si při práci na chvíli zastavit, příjemně se protáhnout a odreagovat.'
   }]  ;
+
+  public yogaTexts: IYogaTexts[] = [{
+    label: 'Hatha jóga',
+    text: 'Hatha jóga se obecně cvičí v pomalejším tempu, s delšími výdržemi ve statických pozicích. Díky pravidelné praxi dosáhnete větší fyzické síly, emoční pohody a celkového zdraví.'
+  },{
+    label: 'Jóga',
+    text: 'Jóga posiluje a tonizuje svaly a páteř, zvětšuje pohybovou flexibilitu a uvolňuje svalové napětí. Zvětšuje kapacitu plic, celkově zlepšuje zdraví a uvolňuje mysl.'
+  },{
+    label: 'Vinysa jóga',
+    text: 'Vinysa jóga je kreativní forma jógy, kde jsou pozice spojeny s dechem v plynulé sekvenci. Krásou Vinyasa jógy je rozmanitost. Ve Vinyasa józe neexistuje žádná standardní sekvence, dovolit si můžete tvořit a experimentovat s pohybem.'
+  },{
+    label: 'Power jóga',
+    text: 'Power jóga je zaměřena na budování síly a vytrvalosti. Je to také vynikající forma jógy pro spalování kalorií, je to rychlá a intenzivní aktivita.'
+  },{
+    label: 'Dance Flow jóga',
+    text: 'Dance flow jóga je příjemně plynoucí mix vinyasa flow jógy a tance. Při sestavování sekvencí mohou studenti pracovat bez podložek. Zaměří se na svůj přirozený pohyb a prozkoumají jeho plynulost, sílu, výdrž a rovnováhu.'
+  },{
+    label: 'Prenatal jóga',
+    text: 'Těhotenská jóga je forma jemné jógy, která je navržena tak, aby splňovala potřeby pro zdravý a vhodný pohyb během všech tří trimestrů. Pomůže tělu připravit se na období porodu, pracuje s dechem, svaly pánevního dna, udržuje flexibilitu a uvolňuje napětí.'
+  }];
 
   constructor(@Inject(DOCUMENT) private document: Document) {
 
@@ -43,8 +63,20 @@ export class AppComponent {
       const header = this.document.getElementById('header');
       const headerLinks = this.document.getElementsByClassName('header-link');
       const hamburgerIcon = this.document.getElementById('hamburgerIcon');
+      const headerIcons = this.document.getElementsByClassName('fa');
 
-      if (hamburgerIcon && eventScroll.currentTarget.pageYOffset > 0) {
+      if (headerIcons && eventScroll.currentTarget.pageYOffset > 0) {
+        Array.prototype.forEach.call(headerIcons, function(el) {
+          el.style.color = '#201F25';
+      });
+      
+      } else if (headerIcons && eventScroll.currentTarget.pageYOffset === 0) {
+         Array.prototype.forEach.call(headerIcons, function(el) {
+          el.style.color = 'white';
+      });
+      }
+
+       if (hamburgerIcon && eventScroll.currentTarget.pageYOffset > 0) {
         hamburgerIcon.style.color = '#34ccbd';
       } else if (hamburgerIcon && eventScroll.currentTarget.pageYOffset === 0) {
         hamburgerIcon.style.color = 'white';
@@ -53,7 +85,7 @@ export class AppComponent {
       if (header && eventScroll.currentTarget.pageYOffset > 0) {
         header.style.backgroundColor = 'white';
         Array.prototype.forEach.call(headerLinks, function(el) {
-          el.style.color = 'black';
+          el.style.color = '#201F25';
       });
       
       } else if (header && eventScroll.currentTarget.pageYOffset === 0) {

@@ -77,6 +77,11 @@ img {
   color: white;
 }
 
+
+.full-width {
+  width: 100%;
+}
+
 button {
   max-width: 100%;
   min-width: 140px;
@@ -99,6 +104,10 @@ button {
   }
 }
 
-.full-width {
-  min-width: 100%;
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

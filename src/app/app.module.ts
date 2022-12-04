@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ReferencesComponent } from './components/references/references.component';
 import { SwiperModule } from 'swiper/angular';
-import { ServicesComponent } from './components/services/services.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProfilePhotoComponent } from './components/profile-photo/profile-photo.component';
 import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
@@ -17,19 +16,21 @@ import { CommonModule } from '@angular/common';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { SectionComponent } from './components/section/section.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CdkAccordionModule } from '@angular/cdk/accordion';
+import { YogaTypesComponent } from './components/yoga-types/yoga-types.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ReferencesComponent,
-    ServicesComponent,
     AboutComponent,
     ProfilePhotoComponent,
     ContactComponent,
     PricingComponent,
     SectionComponent,
-    FooterComponent
+    FooterComponent,
+    YogaTypesComponent
   ],
   imports: [
     CommonModule,
@@ -39,6 +40,7 @@ import { FooterComponent } from './components/footer/footer.component';
     SwiperModule,
     NgxHideOnScrollModule,
     LayoutModule,
+    CdkAccordionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
