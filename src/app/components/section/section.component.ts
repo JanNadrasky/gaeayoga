@@ -13,6 +13,7 @@ export class SectionComponent implements OnInit {
   @Input() imgSrc!: string;
   @Input() title = 'default';
   @Input() id = 'default';
+  @Input() noButton = false;
 
   constructor() { }
 

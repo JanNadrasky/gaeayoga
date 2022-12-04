@@ -13,7 +13,7 @@
         </div>
         <div fxFlex.gt-sm="50%" class="section-wrapper__body-wrapper__text" fxLayout="column">
             <span [innerHTML]="text.text" class="section-wrapper__body-wrapper__text--text"></span>
-            <button>REZERVOVAT</button>
+            <button *ngIf="!noButton">REZERVOVAT</button>
         </div>
     </section>
 </section>
