@@ -1,225 +1,204 @@
-@import "swiper/css";
-@import "swiper/css/navigation";
-@import "swiper/css/pagination";
-@import "swiper/css/autoplay";
-@import "swiper/css/controller";
-@import "swiper/css/effect-fade";
-@import "swiper/css/parallax";
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/autoplay';
+@import 'swiper/css/controller';
+@import 'swiper/css/effect-fade';
+@import 'swiper/css/parallax';
 
-@import "./scss/variables";
+@import './scss/variables';
 
 @font-face {
     font-family: Libre Franklin sans-serif;
-    src: url("/assets/fonts/LibreFranklin-VariableFont_wght.ttf") format("truetype");
+    src: url('/assets/fonts/LibreFranklin-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
     font-family: Prata Regular sans-serif;
-    src: url("/assets/fonts/Prata-Regular.ttf") format("truetype");
+    src: url('/assets/fonts/Prata-Regular.ttf') format('truetype');
 }
 
 body {
-  font-family: Prata Regular sans-serif;
-  margin: 0;
-  color: white;
+    font-family: Prata Regular sans-serif;
+    margin: 0;
+    color: white;
 }
 
 h1 {
-  font-size: 70px;
-  font-weight: 100;
-  line-height: 80px;
+    font-size: 70px;
+    font-weight: 100;
+    line-height: 80px;
 
-  @media  screen and (max-width: 959px) {
-    font-size: 50px;
-    line-height: 70px;
-  }
+    @media screen and (max-width: 959px) {
+        font-size: 50px;
+        line-height: 70px;
+    }
 }
 
 h2 {
-  font-size: 22px;
-  font-weight: 300;
+    font-size: 22px;
+    font-weight: 300;
 }
 
 h3 {
-  font-size: 28px;
-  font-weight: 300;
+    font-size: 28px;
+    font-weight: 300;
 }
 
 h4 {
-  font-size: 24px;
-  font-weight: 100;
-  line-height: 14px;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 14px;
 }
 
 span {
-  font-size: 14px;
-  font-weight: 100;
-  line-height: 32px;
-
-  @media  screen and (max-width: 959px) {
     font-size: 14px;
-    line-height: 30px;
-  }
+    font-weight: 100;
+    line-height: 32px;
+
+    @media screen and (max-width: 959px) {
+        font-size: 14px;
+        line-height: 30px;
+    }
 }
 
 a {
-  font-size: 16px;
-  margin: auto;
-  transition: font-weight 250ms ease-in-out;
+    font-size: 16px;
+    margin: auto;
+    transition: font-weight 250ms ease-in-out;
 
-  &.button-link {
-    color: white;
-    text-decoration: none;
+    &.button-link {
+        color: white;
+        text-decoration: none;
 
-     &:hover {
-      cursor: pointer;
-      color: $primary;
-      text-decoration: none;
+        &:hover {
+            cursor: pointer;
+            color: $primary;
+            text-decoration: none;
+        }
     }
-  }
 
-  &:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    font-weight: 900;
-  }
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 900;
+    }
 }
 
 .text-color-black {
-  color: $black;
+    color: $black;
 }
 
 .text-color-green {
-  color: $primary;
+    color: $primary;
 }
 
 img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .swiper-button-prev {
-  color: white;
+    color: white;
 }
 
 .swiper-button-next {
-  color: white;
+    color: white;
 }
 
-
 .full-width {
-  width: 100%;
+    width: 100%;
 }
 
 button {
-  max-width: 100%;
-  min-width: 140px;
-  border-color: white;
-  min-height: 60px;
-  background-color: $primary;
+    max-width: 100%;
+    min-width: 140px;
+    border-color: white;
+    min-height: 60px;
+    background-color: $primary;
 
-  color: white;
-  border-style: solid;
-  border-radius: 5px;
-  padding: 5px 0;
-  font-family: "TeXGyreAdventor", sans-serif;
-  font-weight: bold;
-  cursor: pointer;
+    color: white;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px 0;
+    font-family: 'TeXGyreAdventor', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
 
-  a {
+    a {
+        &:hover {
+            color: $primary !important;
+            text-decoration: none;
+        }
+    }
+
     &:hover {
-      color: $primary !important;
-    }  
-  }
-
-  &:hover {
-    border-color: $primary;
-    background-color: white;
-    color: $primary !important;
-  }
+        border-color: $primary;
+        background-color: white;
+        color: $primary !important;
+    }
 }
 
 .mb-20 {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .cursor-pointer {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .highlight {
-  position: relative;
-  display:table;
-  transition:.6s;
+    position: relative;
+    display: table;
+    transition: 0.6s;
 }
 .highlight:before,
 .highlight:after {
-  content:attr(data-text);
-  transition:.6s;
+    content: attr(data-text);
+    transition: 0.6s;
 }
 .highlight:before {
-  left: 0;
-  top: 0;
-  position: absolute;
-  z-index:-1;
-  text-shadow:
-   0px 0px,
-   0px 0px,
-   0px 0px,
-   0px 0px,
-   0px 0px,
-   0px 0px,
-   0px 0px,
-   0px 0px,
-   0px 0px,
-   0px 0px;
-  -webkit-mask:repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
-          mask:repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    text-shadow: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    -webkit-mask: repeating-linear-gradient(45deg, transparent 0 3px, rgba(0, 0, 0, 0.5) 0 6px);
+    mask: repeating-linear-gradient(45deg, transparent 0 3px, rgba(0, 0, 0, 0.5) 0 6px);
 }
 .highlight.section:hover {
-  transform:translate(-10px,-10px);
-}  
+    transform: translate(-10px, -10px);
+}
 .highlight:hover:before {
-  text-shadow:
-   1px 1px,
-   2px 2px,
-   3px 3px,
-   4px 4px,
-   5px 5px,
-   6px 6px,
-   7px 7px,
-   8px 8px,
-   9px 9px,
-   10px 10px;
+    text-shadow: 1px 1px, 2px 2px, 3px 3px, 4px 4px, 5px 5px, 6px 6px, 7px 7px, 8px 8px, 9px 9px, 10px 10px;
 }
 
 strong {
-  position: relative;
-  font-weight: 100;
+    position: relative;
+    font-weight: 100;
 
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: -0.525rem;
-    left: -0.5rem;
-    right: -0.5rem;
-    height: 2rem;
-    z-index: -1;
-    background-image: url(./assets/pattern/underline.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -0.525rem;
+        left: -0.5rem;
+        right: -0.5rem;
+        height: 2rem;
+        z-index: -1;
+        background-image: url(./assets/pattern/underline.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 p > strong {
-  font-weight: 100;  
+    font-weight: 100;
 
-  &::after {
-    // Specific positioning for smaller text
-    bottom: -0.2rem;
-    height: 0.5rem;
-    left: -0.25rem;
-    right: -0.25rem;
-  }
+    &::after {
+        // Specific positioning for smaller text
+        bottom: -0.2rem;
+        height: 0.5rem;
+        left: -0.25rem;
+        right: -0.25rem;
+    }
 }
