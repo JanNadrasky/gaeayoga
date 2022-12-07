@@ -14,5 +14,9 @@
         padding: 40px;
         max-width: 360px;
         border: 2px solid $primary;
+
+        @media screen and (max-width: 959px) {
+            margin: 10px;
+        }
     }
 }
