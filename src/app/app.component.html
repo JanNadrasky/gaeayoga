@@ -1,13 +1,26 @@
 <div class="wrapper">
-  <div class="wrapper__inner-content">
-    <app-header></app-header>
-    <app-profile-photo></app-profile-photo>
-    <app-section [noButton]="true" title="O NÁS" id="about" imgSrc="../../../assets/images/about.jpg" [texts]="aboutTexts"></app-section>
-    <app-lecturers></app-lecturers>
-    <app-section title="LEKCE" id="lessons" imgSrc="../../../assets/images/lessons.jpg" [texts]="lessonTexts"></app-section>
-    <app-yoga-types [yogaTexts]="yogaTexts"></app-yoga-types>
-    <app-pricing></app-pricing>
-    <app-section title="AKCE" id="actions" imgSrc="../../../assets/images/actions.jpg" [texts]="actionsTexts"></app-section>
-    <app-footer id="footer"></app-footer>
-  </div>
+    <div class="wrapper__inner-content">
+        <app-header></app-header>
+        <app-profile-photo></app-profile-photo>
+        <app-section
+            [noButton]="true"
+            title="O NÁS"
+            id="about"
+            imgSrc="../../../assets/images/about.jpg"
+            [texts]="aboutTexts"></app-section>
+        <app-lecturers></app-lecturers>
+        <app-section
+            title="LEKCE"
+            id="lessons"
+            imgSrc="../../../assets/images/lessons.jpg"
+            [texts]="lessonTexts"></app-section>
+        <app-yoga-types [yogaTexts]="yogaTexts"></app-yoga-types>
+        <app-pricing></app-pricing>
+        <app-section
+            title="AKCE"
+            id="actions"
+            imgSrc="../../../assets/images/actions.jpg"
+            [texts]="actionsTexts"></app-section>
+        <app-footer id="footer"></app-footer>
+    </div>
 </div>

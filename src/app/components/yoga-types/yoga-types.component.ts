@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IYogaTexts } from 'src/app/interfaces/section.intrface';
 
 @Component({
@@ -6,14 +6,9 @@ import { IYogaTexts } from 'src/app/interfaces/section.intrface';
   templateUrl: './yoga-types.component.html',
   styleUrls: ['./yoga-types.component.scss']
 })
-export class YogaTypesComponent implements OnInit {
+export class YogaTypesComponent {
 
   @Input() yogaTexts!: IYogaTexts[];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   public navigateToReservation(): void {
     window.open('http://gaea-yoga-plzen.reservio.com', '_blank');

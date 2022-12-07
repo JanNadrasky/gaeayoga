@@ -6,10 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SwiperModule } from 'swiper/angular';
-import { AboutComponent } from './components/about/about.component';
 import { ProfilePhotoComponent } from './components/profile-photo/profile-photo.component';
 import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
-import { ContactComponent } from './components/contact/contact.component';
 import {LayoutModule} from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { PricingComponent } from './components/pricing/pricing.component';
@@ -23,9 +21,7 @@ import { LecturersComponent } from './components/lecturers/lecturers.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    AboutComponent,
     ProfilePhotoComponent,
-    ContactComponent,
     PricingComponent,
     SectionComponent,
     FooterComponent,

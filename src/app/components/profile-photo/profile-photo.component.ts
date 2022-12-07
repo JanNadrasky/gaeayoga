@@ -13,11 +13,7 @@ export class ProfilePhotoComponent {
   @ViewChild('swiper') swiper!: SwiperComponent;
   public button = 'REZERVOVAT';
   public text = 'Váš čas na jógu je dnes';
-  
-
   public textIndex: number = 1;
-  private interval!: ReturnType<typeof setInterval>;
-  private isNotFirst!: boolean;
   public swiperData = [
     { src: '../../../assets/images/header1.png', button: 'REZERVOVAT', text: 'Váš čas na jógu je dnes' },
     { src: '../../../assets/images/header2.png', button: 'REZERVOVAT', text: 'Váš čas na jógu je dnes' },
@@ -25,27 +21,22 @@ export class ProfilePhotoComponent {
     { src: '../../../assets/images/header4.png', button: 'REZERVOVAT', text: 'Váš čas na jógu je dnes' },
     { src: '../../../assets/images/header5.png', button: 'REZERVOVAT', text: 'Váš čas na jógu je dnes' },
   ]
-  isStopped!: boolean;
+  private interval!: ReturnType<typeof setInterval>;
+  private isNotFirst!: boolean;
+  private isStopped!: boolean;
 
   constructor(private ref: ChangeDetectorRef) { }
-
-
-  getData(data: any) {
-    if (data && data[this.textIndex]) {
-      return data[this.textIndex].text;
-    }
-  }
 
   public navigateToReservation(): void {
     window.open('http://gaea-yoga-plzen.reservio.com', '_blank');
   }
 
-  stopTimeout() {
+  public stopTimeout(): void {
     clearInterval(this.interval);
     this.isStopped = true;
   }
 
-  onSwiper(swiper: any) {
+  public onSwiper(swiper: any): void {
     if (!this.isStopped) {
       this.interval = setInterval(() => {
         swiper.slideNext();
@@ -53,7 +44,7 @@ export class ProfilePhotoComponent {
     }
   }
 
-  onSlideChange(event: any): void {
+  public onSlideChange(event: any): void {
     clearInterval(this.interval);
     this.isStopped = true;
     if (this.isNotFirst) {

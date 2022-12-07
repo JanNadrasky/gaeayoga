@@ -1,0 +1,8 @@
+.angular/
+.git/
+.gitlab-ci-local/
+.idea/
+.vscode/
+dist/
+mock/
+node_modules/

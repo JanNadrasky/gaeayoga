@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IServiceText } from 'src/app/interfaces/section.intrface';
 
 @Component({
@@ -6,7 +6,7 @@ import { IServiceText } from 'src/app/interfaces/section.intrface';
   templateUrl: './section.component.html',
   styleUrls: ['./section.component.scss']
 })
-export class SectionComponent implements OnInit {
+export class SectionComponent {
 
   @Input() section = 'default';
   @Input() texts!: IServiceText[];
@@ -14,11 +14,6 @@ export class SectionComponent implements OnInit {
   @Input() title = 'default';
   @Input() id = 'default';
   @Input() noButton = false;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   public navigateToReservation(): void {
     window.open('http://gaea-yoga-plzen.reservio.com', '_blank');

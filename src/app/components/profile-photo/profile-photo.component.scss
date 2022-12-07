@@ -1,65 +1,61 @@
-@import "./../../../scss/variables";
+@import './../../../scss/variables';
 
 :host {
-  width: 100%;
-  background-color: $primary;
-  background: $primary;
+    width: 100%;
+    background-color: $primary;
+    background: $primary;
 }
 
 .swiper-wrapper {
-  padding-top: 120px;
-  position: relative;
-
-  &__swiper-image {
-    padding: 0 100px;
+    padding-top: 120px;
     position: relative;
-    max-width: 100%;
-    height: 100%;
-    background-image: url('../../../assets/images/headerbg.jpg');
-    background-size: 100%;
 
-    &--img {
-      width: 100%;
-      height: auto;
-      padding: 20px;
-    }
+    &__swiper-image {
+        padding: 0 100px;
+        position: relative;
+        max-width: 100%;
+        height: 100%;
+        background-image: url('../../../assets/images/headerbg.jpg');
+        background-size: 100%;
 
-    &__info-container {
-      padding-bottom: 100px;
+        &--img {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+        }
+
+        &__info-container {
+            padding-bottom: 100px;
+        }
     }
-  }
 }
 
 .swiper-wrapper-xs {
-  position: relative;
-  padding-top: 120px;
-
-  &__swiper-image {
     position: relative;
-    max-width: 100%;
-    height: 100%;
-    background-image: url('../../../assets/images/headerbg.jpg');
-    background-size: 200%;
+    padding-top: 120px;
 
-    
-   &--img {
-      position: relative;
-      width: 100%;
-      height: auto;
-      
+    &__swiper-image {
+        position: relative;
+        max-width: 100%;
+        height: 100%;
+        background-image: url('../../../assets/images/headerbg.jpg');
+        background-size: 200%;
+
+        &--img {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
     }
-  }
-
 
     &__info-container {
-      padding: 20px;
-      background-color:$primary ;
-      position: relative;
-      padding-bottom: 20px;
+        padding: 20px;
+        background-color: $primary;
+        position: relative;
+        padding-bottom: 20px;
 
-      &--text {
-        text-align: center;
-      }
+        &--text {
+            text-align: center;
+        }
     }
 }
-
