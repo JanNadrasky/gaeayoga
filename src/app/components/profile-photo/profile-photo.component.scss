@@ -41,6 +41,10 @@
         background-image: url('../../../assets/images/headerbg.jpg');
         background-size: 200%;
 
+        @media screen and (max-width: 959px) {
+            background-size: 220%;
+        }
+
         &--img {
             position: relative;
             width: 100%;
