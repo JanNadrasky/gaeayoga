@@ -12,4 +12,8 @@ export class LecturersComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public navigateToReservation(): void {
+    window.open('http://gaea-yoga-plzen.reservio.com', '_blank');
+  }
+
 }

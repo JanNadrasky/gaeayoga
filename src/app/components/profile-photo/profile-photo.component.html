@@ -25,7 +25,7 @@
           <div class="swiper-wrapper__swiper-image__info-container" fxLayoutAlign="center start" fxLayout="column" fxFlex="50%">
             <div style="max-width: 400px">
             <h1 class="swiper-wrapper__swiper-image__info-container--text">{{ slide.text }}</h1>
-            <button class="swiper-wrapper__swiper-image__info-container--button">{{ slide.button }}</button>
+            <button (click)="navigateToReservation()"  class="swiper-wrapper__swiper-image__info-container--button">{{ slide.button }}</button>
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@
     </swiper>
      <div class="swiper-wrapper-xs__info-container" fxLayoutAlign="center center" fxLayout="column">
               <h1 class="swiper-wrapper-xs__info-container--text">{{ text }}</h1>
-              <button class="swiper-wrapper-xs__info-container--button">{{ button }}</button>
+              <button (click)="navigateToReservation()"  class="swiper-wrapper-xs__info-container--button">{{ button }}</button>
       </div>
   </div>
 

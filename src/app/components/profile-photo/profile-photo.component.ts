@@ -36,6 +36,10 @@ export class ProfilePhotoComponent {
     }
   }
 
+  public navigateToReservation(): void {
+    window.open('http://gaea-yoga-plzen.reservio.com', '_blank');
+  }
+
   stopTimeout() {
     clearInterval(this.interval);
     this.isStopped = true;

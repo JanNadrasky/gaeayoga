@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  navigateTo(pattern: string, isMobile: boolean) {
+  public navigateTo(pattern: string, isMobile: boolean): void {
     if (pattern === 'top') {
       window.scrollTo(0,0);
     }
@@ -37,7 +37,20 @@ export class HeaderComponent implements OnInit {
   window.scrollTo({top: y, behavior: 'smooth'});
   }
 
-  onNavbarOpen() {
+  public navigateToReservation(isMobile: boolean): void {
+    window.open('http://gaea-yoga-plzen.reservio.com', '_blank');
+    if (isMobile) {
+      this.navbarOpen = !this.navbarOpen;
+      const nav = this.document.getElementById("myNav");
+      const body = this.document.body;
+      if (nav && body) {
+        body.style.overflow = 'hidden';
+        nav.style.width = "100%"
+      }
+    }
+  }
+
+  public onNavbarOpen(): void {
     this.navbarOpen = !this.navbarOpen;
     const nav = this.document.getElementById("myNav");
     const body = this.document.body;

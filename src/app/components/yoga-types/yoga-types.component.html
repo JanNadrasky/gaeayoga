@@ -1,6 +1,6 @@
 <div class="yoga-types-wrapper" fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap.gt-md="40px" fxLayoutAlign="center center">
     <div fxFlex.gt-sm="50%" class="yoga-types-wrapper__quote">
-            <h1>Druhy jógy</h1>
+            <h1 class="highlight  section">Druhy jógy</h1>
         </div>
         <div fxFlex.gt-sm="50%" ngClass.lt-md="full-width" class="yoga-types-wrapper__accordion">
     <cdk-accordion class="accordion">
@@ -26,6 +26,6 @@
             </div>
         </cdk-accordion-item>
         </cdk-accordion>
-        <button class="full-width">REZERVOVAT</button>
+        <button (click)="navigateToReservation()"  class="full-width">REZERVOVAT</button>
     </div>
 </div>

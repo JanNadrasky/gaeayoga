@@ -3,17 +3,17 @@
         <div class="section-wrapper__header-wrapper__header">
             <img [src]="imgSrc"/>
             <div class="container">
-                <span class="highlight-container"><span class="highlight"><h1 class="section-wrapper__header-wrapper__header--title">{{ title }}</h1></span></span>
+                <span class="highlight-container"><span class="highlight"><h1  class="section-wrapper__header-wrapper__header--title">{{ title }}</h1></span></span>
             </div>
         </div>
     </section>
     <section *ngFor="let text of texts" class="section-wrapper__body-wrapper" fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap.gt-sm="40px" fxLayoutAlign="center center">
         <div fxFlex.gt-sm="50%" class="section-wrapper__body-wrapper__quote">
-            <h1>{{ text.quote }}</h1>
+            <h1 class="highlight section">{{ text.quote }}</h1>
         </div>
         <div fxFlex.gt-sm="50%" class="section-wrapper__body-wrapper__text" fxLayout="column">
             <span [innerHTML]="text.text" class="section-wrapper__body-wrapper__text--text"></span>
-            <button *ngIf="!noButton">REZERVOVAT</button>
+            <button (click)="navigateToReservation()"  *ngIf="!noButton">REZERVOVAT</button>
         </div>
     </section>
 </section>
