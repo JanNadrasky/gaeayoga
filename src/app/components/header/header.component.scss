@@ -4,6 +4,16 @@
     color: $black !important;
     background-color: white !important;
     box-shadow: 2px 2px $primary;
+
+    i {
+        color: $black;
+    }
+}
+
+.nav {
+    i {
+        color: white;
+    }
 }
 
 :host {

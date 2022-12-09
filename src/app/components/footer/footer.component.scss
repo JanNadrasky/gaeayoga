@@ -8,4 +8,33 @@
     width: 100%;
     min-height: 240px;
     background-color: $primary;
+
+    a {
+        color: white;
+    }
+
+    &__logo-container {
+        width: 280px;
+        margin: 10px;
+
+        &--img {
+            max-width: 240px;
+        }
+    }
+
+    &__contact-container {
+        margin: 10px;
+        width: 280px;
+        padding: 20px;
+
+        @media screen and (max-width: 959px) {
+            text-align: center;
+        }
+    }
+
+    &__socials-container {
+        margin: 10px;
+        width: 280px;
+        padding: 20px;
+    }
 }

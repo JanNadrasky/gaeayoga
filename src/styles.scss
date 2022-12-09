@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: Prata Regular sans-serif;
-    src: url('/assets/fonts/Prata-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/CharisSILR.ttf') format('truetype');
 }
 
 body {
@@ -25,9 +25,9 @@ body {
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 100;
-    line-height: 80px;
+    line-height: 70px;
 
     @media screen and (max-width: 959px) {
         font-size: 45px;
@@ -36,8 +36,14 @@ h1 {
 }
 
 h2 {
-    font-size: 22px;
-    font-weight: 300;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 55px;
+
+    @media screen and (max-width: 959px) {
+        font-size: 30px;
+        line-height: 40px;
+    }
 }
 
 h3 {
@@ -63,7 +69,6 @@ span {
 }
 
 a {
-    color: white;
     text-decoration: none;
     font-size: 16px;
     transition: font-weight 250ms ease-in-out;
@@ -92,6 +97,7 @@ a {
 
 .text-color-green {
     color: $primary;
+    text-align: center;
 }
 
 img {

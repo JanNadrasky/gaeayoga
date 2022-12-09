@@ -5,6 +5,15 @@
     margin-bottom: 60px;
     padding: 20px calc(15% - 40px);
 
+    &__title-wrapper {
+        padding: 40px 0;
+
+        @media screen and (max-width: 959px) {
+            max-width: 80%;
+            text-align: center;
+        }
+    }
+
     @media screen and (max-width: 959px) {
         padding: 20px calc(5% - 40px);
     }
@@ -12,11 +21,67 @@
     &__card {
         margin: 20px;
         padding: 40px;
-        max-width: 360px;
+        max-width: 260px;
         border: 2px solid $primary;
 
         @media screen and (max-width: 959px) {
             margin: 10px;
+            padding: 10px;
         }
+
+        &--item {
+            min-height: 32px;
+        }
+
+        &--title {
+            min-height: 100px;
+        }
+    }
+}
+
+.container {
+    position: absolute;
+    top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+    line-height: 1.4;
+    text-align: center;
+    padding: 44px;
+    color: #333;
+
+    @media screen and (max-width: 959px) {
+        top: 10%;
+    }
+}
+
+.highlight-container,
+.highlight {
+    position: relative;
+}
+
+.highlight-container {
+    display: inline-block;
+}
+.highlight-container:before {
+    content: ' ';
+    display: block;
+    height: 90%;
+    width: 120%;
+    margin-left: -3px;
+    margin-right: -3px;
+    position: absolute;
+    background: $primary;
+    transform: rotate(2deg);
+    top: 10px;
+    left: -10%;
+    border-radius: 20% 25% 20% 24%;
+    padding: 10px 3px 3px 10px;
+
+    @media screen and (max-width: 959px) {
+        width: 100%;
+        left: -1px;
     }
 }

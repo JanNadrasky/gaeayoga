@@ -43,8 +43,10 @@
             color: $secondary;
             width: 100%;
 
-            &--text {
-                margin-bottom: 40px;
+            @media screen and (max-width: 959px) {
+                &--text {
+                    margin-bottom: 40px;
+                }
             }
         }
     }
@@ -86,7 +88,7 @@
     position: absolute;
     background: $primary;
     transform: rotate(2deg);
-    top: -1px;
+    top: 10px;
     left: -1px;
     border-radius: 20% 25% 20% 24%;
     padding: 10px 3px 3px 10px;

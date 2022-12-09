@@ -12,7 +12,7 @@ export class AppComponent {
   private scrollTop = 0;
 
   public aboutTexts: IServiceText[] = [{
-    quote: '"Nabízíme nejlepší kurzy„',
+    quote: '"Pojďme se stát nejlepší verzí sebe sama„',
     text: 'Jsme jógové studio v centru Plzně. Nabízíme širokou škálu jógových lekcí, ale i další  pohybové lekce pro vaši fyzickou a psychickou pohodu, zdraví a harmonii. Naše lekce trvají déle, 75 - 90 minut, abyste se mohli skutečnět uvolnit a ponořit do procesu. Vydejte se s námi na cestu poznání skrze sebe sama. Přijďte si s námi zacvičit, meditovat, zpívat nebo tančit. Projevte plně svůj potenciál a získejte ke svému životu a sami k sobě vědomější přístup.'
   }];
 
@@ -66,8 +66,10 @@ export class AppComponent {
 
       if (nav && eventScroll.currentTarget.pageYOffset > 0) {
         nav.classList.add('nav-inverse');
+        nav.classList.remove('nav');
       
       } else if (nav && eventScroll.currentTarget.pageYOffset === 0) {
+          nav.classList.add('nav');
          nav.classList.remove('nav-inverse');
       }
 
