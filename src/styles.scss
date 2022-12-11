@@ -10,12 +10,12 @@
 
 @font-face {
     font-family: Libre Franklin sans-serif;
-    src: url('/assets/fonts/LibreFranklin-VariableFont_wght.ttf') format('truetype');
+    src: url('./assets/fonts/LibreFranklin-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
     font-family: Prata Regular sans-serif;
-    src: url('/assets/fonts/CharisSILR.ttf') format('truetype');
+    src: url('./assets/fonts/CharisSILR.ttf') format('truetype');
 }
 
 body {
@@ -144,6 +144,10 @@ button {
         background-color: white;
         color: $primary !important;
     }
+}
+
+.medium-button {
+    min-width: 240px;
 }
 
 .mb-20 {

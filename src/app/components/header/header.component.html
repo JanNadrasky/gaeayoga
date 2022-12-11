@@ -10,12 +10,12 @@
                 (click)="navigateTo('top', false)"
                 *ngIf="!isNotTop"
                 class="header__container--logo cursor-pointer"
-                src="../../../assets/logos/Logo1.png" />
+                src="./assets/logos/Logo1.png" />
             <img
                 (click)="navigateTo('top', false)"
                 *ngIf="isNotTop"
                 class="header__container--logo cursor-pointer"
-                src="../../../assets/logos/Logo2.png" />
+                src="./assets/logos/Logo2.png" />
             <i id="hamburgerIcon" (click)="onNavbarOpen()" fxHide.gt-sm class="fa fa-bars fa-4x cursor-pointer"></i>
             <div fxHide.lt-md class="header__container__menu-items" fxLayoutGap="30px" fxLayout="row">
                 <h3><a class="header-link" (click)="navigateTo('top', false)">DOMŮ</a></h3>
@@ -27,13 +27,13 @@
                 <h3><a class="header-link" (click)="navigateTo('footer', false)">KONTAKT</a></h3>
             </div>
             <div fxHide.lt-md class="header__container__social" fxLayout="row" fxLayoutAlign="space-between">
-                <a href="https://www.facebook.com/GaeaYogaPlzen"
+                <a target="_blank" href="https://www.facebook.com/GaeaYogaPlzen"
                     ><i class="fa fa-facebook-f fa-1x cursor-pointer"></i
                 ></a>
-                <a href="https://www.instagram.com/gaeayoga.cz">
+                <a target="_blank" href="https://www.instagram.com/gaeayoga.cz">
                     <i class="fa fa-instagram fa-1x cursor-pointer"></i
                 ></a>
-                <a href="https://www.youtube.com/@gaeayoga">
+                <a target="_blank" href="https://www.youtube.com/@gaeayoga">
                     <i class="fa fa-youtube fa-1x cursor-pointer"></i>
                 </a>
             </div>

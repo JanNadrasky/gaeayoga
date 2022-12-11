@@ -32,28 +32,12 @@ export class AppComponent {
     text: 'Rádi byste, abychom přišli mi za vámi? Není problém domluvit si lekci třeba v prostorách vaší kanceláře. Skupinovou či individuální jógu. Dovolte si při práci na chvíli zastavit, příjemně se protáhnout a odreagovat.'
   }]  ;
 
-  public yogaTexts: IYogaTexts[] = [{
-    label: 'Hatha jóga',
-    text: 'Hatha jóga se obecně cvičí v pomalejším tempu, s delšími výdržemi ve statických pozicích. Díky pravidelné praxi dosáhnete větší fyzické síly, emoční pohody a celkového zdraví.'
-  },{
-    label: 'Jóga',
-    text: 'Jóga posiluje a tonizuje svaly a páteř, zvětšuje pohybovou flexibilitu a uvolňuje svalové napětí. Zvětšuje kapacitu plic, celkově zlepšuje zdraví a uvolňuje mysl.'
-  },{
-    label: 'Vinysa jóga',
-    text: 'Vinysa jóga je kreativní forma jógy, kde jsou pozice spojeny s dechem v plynulé sekvenci. Krásou Vinyasa jógy je rozmanitost. Ve Vinyasa józe neexistuje žádná standardní sekvence, dovolit si můžete tvořit a experimentovat s pohybem.'
-  },{
-    label: 'Power jóga',
-    text: 'Power jóga je zaměřena na budování síly a vytrvalosti. Je to také vynikající forma jógy pro spalování kalorií, je to rychlá a intenzivní aktivita.'
-  },{
-    label: 'Dance Flow jóga',
-    text: 'Dance flow jóga je příjemně plynoucí mix vinyasa flow jógy a tance. Při sestavování sekvencí mohou studenti pracovat bez podložek. Zaměří se na svůj přirozený pohyb a prozkoumají jeho plynulost, sílu, výdrž a rovnováhu.'
-  },{
-    label: 'Prenatal jóga',
-    text: 'Těhotenská jóga je forma jemné jógy, která je navržena tak, aby splňovala potřeby pro zdravý a vhodný pohyb během všech tří trimestrů. Pomůže tělu připravit se na období porodu, pracuje s dechem, svaly pánevního dna, udržuje flexibilitu a uvolňuje napětí.'
-  }];
-
   constructor(@Inject(DOCUMENT) private document: Document) {
 
+  }
+
+  public navigateToReservation(): void {
+    window.open('http://gaea-yoga-plzen.reservio.com', '_blank');
   }
 
   ngOnInit() {

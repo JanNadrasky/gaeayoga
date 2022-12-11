@@ -6,20 +6,25 @@
             [noButton]="true"
             title="O NÁS"
             id="about"
-            imgSrc="../../../assets/images/about.jpg"
+            imgSrc="./assets/images/about.jpg"
             [texts]="aboutTexts"></app-section>
         <app-lecturers></app-lecturers>
         <app-section
+            [noButton]="true"
             title="LEKCE"
             id="lessons"
-            imgSrc="../../../assets/images/lessons.jpg"
-            [texts]="lessonTexts"></app-section>
-        <app-yoga-types [yogaTexts]="yogaTexts"></app-yoga-types>
+            imgSrc="./assets/images/lessons.jpg"
+            [texts]="lessonTexts">
+        </app-section>
+        <div class="full-width" fxLayoutAlign="center center">
+            <button class="medium-button" (click)="navigateToReservation()">REZERVOVAT</button>
+        </div>
         <app-pricing></app-pricing>
         <app-section
+            [noButton]="true"
             title="AKCE"
             id="actions"
-            imgSrc="../../../assets/images/actions.jpg"
+            imgSrc="./assets/images/actions.jpg"
             [texts]="actionsTexts"></app-section>
         <app-footer id="footer"></app-footer>
     </div>

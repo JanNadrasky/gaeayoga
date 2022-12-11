@@ -12,14 +12,14 @@ export class ProfilePhotoComponent {
 
   @ViewChild('swiper') swiper!: SwiperComponent;
   public button = 'REZERVOVAT';
-  public text = 'Váš čas na jógu je dnes';
+  public text = 'Váš čas začít je dnes';
   public textIndex: number = 1;
   public swiperData = [
-    { src: '../../../assets/images/header1.png', button: 'REZERVOVAT', text: 'Pravá výzva je pouze ve vaší mysli' },
-    { src: '../../../assets/images/header2.png', button: 'REZERVOVAT', text: 'Pojďte se cítit dobře ve svém vlastním těle' },
-    { src: '../../../assets/images/header3.png', button: 'REZERVOVAT', text: 'Posuňte svou praxi na další úroveň' },
-    { src: '../../../assets/images/header4.png', button: 'REZERVOVAT', text: 'Máme lekce pro každého.' },
-    { src: '../../../assets/images/header5.png', button: 'REZERVOVAT', text: 'Váš čas začít je dnes' },
+    { src: './assets/images/header1.png', button: 'REZERVOVAT', text: 'Pravá výzva je pouze ve vaší mysli' },
+    { src: './assets/images/header2.png', button: 'REZERVOVAT', text: 'Pojďte se cítit dobře ve svém vlastním těle' },
+    { src: './assets/images/header3.png', button: 'REZERVOVAT', text: 'Posuňte svou praxi na další úroveň' },
+    { src: './assets/images/header4.png', button: 'REZERVOVAT', text: 'Máme lekce pro každého' },
+    { src: './assets/images/header5.png', button: 'REZERVOVAT', text: 'Váš čas začít je dnes' },
   ]
   private interval!: ReturnType<typeof setInterval>;
   private isNotFirst!: boolean;

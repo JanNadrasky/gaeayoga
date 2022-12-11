@@ -4,10 +4,7 @@
     fxLayout.lt-md="column"
     fxLayoutGap.gt-md="40px"
     fxLayoutAlign="center center">
-    <div fxFlex.gt-sm="50%" class="yoga-types-wrapper__quote">
-        <h1 class="highlight section">Druhy jógy</h1>
-    </div>
-    <div fxFlex.gt-sm="50%" ngClass.lt-md="full-width" class="yoga-types-wrapper__accordion">
+    <div ngClass="full-width" class="yoga-types-wrapper__accordion">
         <cdk-accordion class="accordion">
             <cdk-accordion-item
                 *ngFor="let item of yogaTexts; let index = index"
@@ -31,6 +28,5 @@
                 </div>
             </cdk-accordion-item>
         </cdk-accordion>
-        <button (click)="navigateToReservation()" class="full-width">REZERVOVAT</button>
     </div>
 </div>
