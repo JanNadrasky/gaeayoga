@@ -9,10 +9,6 @@
         &__header {
             padding: 0;
 
-            @media screen and (max-width: 959px) {
-                padding: 80px 0;
-            }
-
             position: relative;
 
             &--title {
@@ -64,11 +60,11 @@
     color: #333;
 
     @media screen and (max-width: 959px) {
-        top: 20%;
+        top: 0px;
     }
 
     @media screen and (max-width: 600px) {
-        top: 10%;
+        top: -50px;
     }
 }
 
